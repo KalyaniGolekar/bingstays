@@ -1,5 +1,6 @@
 # BingStays
-# ---------
+
+
 
 
 # Looking for a house off-campus in Binghamton?
