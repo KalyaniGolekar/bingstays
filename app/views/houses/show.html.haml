@@ -1,0 +1,34 @@
+-# in app/views/movies/show.html.haml
+
+%h2 Details about #{@house.name}
+
+%ul#details
+  %li
+    Name:
+    = @house.name
+  %li
+    Avg House Rating:
+    = @house.avg_house_rating
+  %li
+    Landlord name:
+    = @house.lord_name
+  %li
+    Avg Landlord rating:
+    = @house.avg_lord_rating
+  %li
+    Capacity:
+    = @house.capacity
+  %li
+    Price:
+    = @house.price
+  %li
+    Description:
+    = @house.description
+  
+    
+
+
+
+= link_to 'Edit', edit_house_path(@house)
+= button_to 'Delete', house_path(@house), :method => :delete
+= link_to 'Back to house list', houses_path

@@ -1,0 +1,33 @@
+%h1 Create New House
+
+= form_tag houses_path do
+  %br
+  = label :house, :name, 'Name'
+  = text_field :house, 'name'
+  %br
+
+  = label :house, :avg_house_rating, 'Average House Rating'
+  = number_field :house, 'avg_house_rating', within: 0...6
+  %br
+
+  = label :house, :lord_name, 'Landlord name'
+  = text_field :house, 'lord_name', required: true
+  %br
+  
+  = label :house, :avg_lord_rating, 'Average Landlord Rating'
+  = number_field :house, 'avg_lord_rating', within: 0...6
+  %br
+  
+  = label :house, :price, 'Price'
+  = number_field :house, 'price'
+  %br
+  
+  = label :house, :capacity, 'Capacity'
+  = number_field :house, 'capacity'
+  %br
+  
+  = label :house, :description, 'Description'
+  = text_field :house, 'description'
+  %br
+
+  = submit_tag 'Save Changes'

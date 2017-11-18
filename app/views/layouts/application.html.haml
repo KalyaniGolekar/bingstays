@@ -7,7 +7,16 @@
     = csrf_meta_tags
 
   %body
-    %h1#header BingStays
+    #header
+      %h1.white BingStays
+    #main
+      - if flash[:notice]
+        #notice.message= flash[:notice]
+      - elsif flash[:warning]
+        #warning.message= flash[:warning]
     = yield 
+    #footer
+      .white BingStays &copy; 2017
+
 
 

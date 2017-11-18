@@ -1,15 +1,13 @@
 #main
-	%img{:src => asset_path("bu.png")}/
+	%img{:src => asset_path("logo.png")}/
 	.right
 		%p
-			%p.center.info
-				%strong "Looking for a house off-campus in Binghamton?"
-			%br "If so, you can stop looking as we will help you look for not just a house but a home.""
-			%br
-			%br			
-			%strong "Afraid of what landlords might turn into once you've signed the lease?" 
-			
-			%br "Worry no more, as we have all the information you need about the landlords, based on user experience."
-		.center
-			%input.button.small.prefix(type="button" value="Click here")
-#footer BingStays &copy; 2017
+			%p
+				%strong.bigger Looking for a house off-campus in Binghamton?
+				%br If so, you can stop looking as we will help you look for not just a house but a home.
+				%br
+				%br			
+				%strong.bigger Afraid of what landlords might turn into once you've signed the lease?
+				%br Worry no more, as we have all the information you need about the landlords, based on user experience.
+				%br
+		=link_to 'Click here', houses_path, id: 'info_button', class: 'button'

@@ -1,0 +1,39 @@
+
+%h1 Update House Details
+
+= form_tag house_path(@house), :method => :put do
+    %table
+        %tr
+            %td= label :house, :name, 'Name'
+            %td=text_field :house, 'name'
+        %tr
+            %td=label :house, :avg_house_rating, 'Avg House Rating'
+            %td= text_field :house, 'avg_house_rating'
+        %tr
+            %td= label :house, :description, 'Description'
+            %td= text_field :house, 'description'
+        %tr
+            %td= label :house, :avg_lord_rating, 'Avg Landlord Rating'
+            %td= text_field :house, 'avg_lord_rating'
+  
+        %tr
+            %td=label :house, :price, 'Price'
+            %td=text_field :house, 'price'
+        
+        %tr
+            %td=label :house, :capacity, 'Capacity'
+            %td=text_field :house, 'capacity'
+            
+        
+        %tr
+            %td=label :house, :lord_name, 'Landlord name'
+            %td=text_field :house, 'lord_name'    
+        
+        %tr
+            %td= submit_tag 'Update House Info'
+  
+
+  
+  
+  
+ 

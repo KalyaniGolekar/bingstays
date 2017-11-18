@@ -1,5 +1,14 @@
 html, body{
+	padding: 0px;
+	margin: -14px 0px;
+}
+
+#main{
 	padding: 15px;
+}
+
+.white{
+	color: rgb(255, 255, 255);
 }
 
 h1{
@@ -7,36 +16,86 @@ h1{
 	font-size: 250%;
 }
 
+.bigger{
+	font-size: 175%;
+}
+
 
 .right{
-	width: 78%;
+	width: 70%;
 	float: right;
 	margin-right: 5px;
 }
 
-.center{
+.button{
 	text-align: center;
-	
+	padding: 10px;
+	border-radius:5px;
+	border:1px solid green;
+	background-color:green;
+	color:white;
+}
+
+.button:hover{
+	color:white;
+	background-color:#228B22;
 }
 
 #header{
-	height: 15%;
-}
-
-.info{
-	margin-top: -1.5%;
-	margin-left: 1.5%;
-	text-align: justify;
-	font-size: 150%;
+	line-height: 100px;
+	margin: 0x;
+	padding: 0px;
+	height: 100px;
+	background-color: #336600;
 }
 
 #footer{
-	margin-top: 25px;
-	height: 30%;
+	height: 15px;
 	text-align: center;
+	background-color: #336600;
 }
 
-input[type="button"]{
-	font-size: 150%;
-	width: 200px;
+#sidebar{
+	text-align: center;
+	padding: 10px;
+	width: 20%;
+	margin: 10px;	
+	position:relative;
+	float:left;
+	height:360px;
+	overflow-y: auto;
+}
+
+#filters, #favs{;
+	border: 1px solid #336600;
+}
+
+#filters{;
+	margin-bottom: 10px;
+}
+
+#content{
+	width: 75%;
+	margin: 10px;
+	float: left;
+	height: 350px;
+	overflow-y: auto;
+}
+
+.house{
+	border: 1px solid green;
+	display:inline-block;
+	float:left;
+	position:relative;
+	text-align:center;
+	margin:10px;
+	width: 300px;
+}
+
+.center{
+	text-align:center;
+}
+
+.desc{
+	font-size:11px;
 }
