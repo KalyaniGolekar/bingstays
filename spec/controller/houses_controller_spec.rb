@@ -23,7 +23,7 @@ describe HousesController, type: :controller do
         end
     end
     
-    describe 'destroys a movie' do
+    describe 'destroys a house' do
         let(:id) {'3'}
         let(:house) {double('house', :name => '52 Potter')}
         
@@ -48,7 +48,7 @@ describe HousesController, type: :controller do
        end
     end
     
-    describe 'shows a movie info' do
+    describe 'shows a house info' do
         let(:id) {'3'}
         let(:house) {double('house')}
         it 'calls the find method on house' do
@@ -58,7 +58,7 @@ describe HousesController, type: :controller do
         
     end
     
-    describe 'goes to edit movie info' do
+    describe 'goes to edit house info' do
         let(:id) {'3'}
         let(:house) {double('house')}
         it 'calls the find method on house' do
@@ -92,4 +92,6 @@ describe HousesController, type: :controller do
             expect(response).to redirect_to(house_path(house))
         end
     end
+    
+    
 end

@@ -13,10 +13,16 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
-    when /^the home\s?page$/
-      '/main#index'
+    when /^the homepage$/
+      root_path
     when /^the list page$/
       '/houses#index'
+    when /^the details page for "([^"]*)"/ 
+      house_path(House.find_by_name($1))
+    when /^the edit page for house with id "([^"]*)"$/
+      edit_house_path($1)
+    when /^houses page/
+      houses_path
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
