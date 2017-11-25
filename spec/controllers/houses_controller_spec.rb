@@ -93,5 +93,28 @@ describe HousesController, type: :controller do
         end
     end
     
+    describe 'index page' do
+        let(:params) {{ :name => 'Uclub' }}
+        let(:rating) {{:avg_house_rating=>'5'}}
+        let(:house) { double('house', params) }
+        let(:result)    {house}
+        it 'displays select house ratings - houses' do
+            allow(House).to receive(:where).with(:avg_house_rating => rating)
+            expect(House).to receive(:create!).with(params).and_return(house)
+            post :create, house: params
+        end
+        
+        it 'sets a flash message' do
+            allow(House).to receive(:create!).with(params).and_return(house)
+            post :create,  house: params
+            expect(flash[:notice]).to eq("#{house.name} was successfully created.")
+        end
+        
+        it 'returns to the houses list' do
+            allow(House).to receive(:create!).with(params).and_return(house)
+            post :create,  house: params
+            expect(response).to redirect_to(houses_path)
+        end
+    end
     
 end

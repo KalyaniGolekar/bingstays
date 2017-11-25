@@ -3,16 +3,17 @@
   
 #sidebar
   #filters
-    %strong Filter
+    Filter
+    = form_tag houses_path, :method => :get, :id => 'house_ratings_form' do
+      Include:
+      - @all_house_ratings.each do |rating|
+        = rating
+        = check_box_tag "houses_ratings[#{rating}]",1, (@selected_house_ratings.include? rating),:id => "houses_ratings_{rating}"
+      = submit_tag 'Refresh', :id => 'house_ratings_submit'
   #favs
     %strong My favorites
 
 #content
-  // - @houses.each do |h|
-  // .element
-  //   = 'Name', h.name
-  //   = 'Price',h.price
-  //   = 'Capacity',h.capacity
   - @houses.each do |h|
     .house
       = h.name

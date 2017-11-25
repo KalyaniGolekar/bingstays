@@ -27,6 +27,15 @@
         null,
         1,
         0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        null,
+        0,
         null,
         null,
         1,
@@ -66,6 +75,8 @@
       ],
       "/home/ubuntu/workspace/bingstays/app/models/house.rb": [
         1,
+        1,
+        0,
         null,
         null
       ],
@@ -76,7 +87,7 @@
         0
       ]
     },
-    "timestamp": 1511203464
+    "timestamp": 1511632220
   },
   "Cucumber Features": {
     "coverage": {
@@ -84,15 +95,24 @@
         1,
         null,
         1,
-        2,
+        1,
         null,
         null,
         1,
-        4,
-        4,
+        0,
+        0,
         null,
         null,
         1,
+        5,
+        5,
+        5,
+        30,
+        null,
+        5,
+        0,
+        0,
+        null,
         5,
         null,
         null,
@@ -100,27 +120,27 @@
         null,
         null,
         1,
-        2,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
         null,
         null,
         1,
         1,
         1,
         1,
-        1,
         null,
         null,
         1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
+        0,
+        0,
+        0,
+        0,
         null,
         null
       ],
@@ -145,6 +165,8 @@
       ],
       "/home/ubuntu/workspace/bingstays/app/models/house.rb": [
         1,
+        1,
+        5,
         null,
         null
       ],
@@ -155,6 +177,6 @@
         null
       ]
     },
-    "timestamp": 1511203137
+    "timestamp": 1511632926
   }
 }

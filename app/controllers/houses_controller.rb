@@ -10,7 +10,16 @@ class HousesController < ApplicationController
     end
     
     def index
-        @houses = House.all
+        @all_house_ratings = House.all_house_ratings
+        @selected_house_ratings = params[:houses_ratings] || {}
+        if @selected_house_ratings == {}
+          @selected_house_ratings = Hash[@all_house_ratings.map {|rating| [rating, rating]}]
+        end
+        if params[:houses_ratings] != session[:houses_ratings]
+          session[:houses_ratings] = @selected_house_ratings
+          redirect_to :houses_ratings => @selected_house_ratings and return
+        end
+        @houses = House.where(avg_house_rating: @selected_house_ratings.keys)
     end
     
     def new
@@ -38,5 +47,5 @@ class HousesController < ApplicationController
         @house.destroy
         flash[:notice] = "House '#{@house.name}' deleted."
         redirect_to houses_path
-  end
+     end
 end
