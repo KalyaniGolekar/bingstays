@@ -9,7 +9,7 @@ When /I press the button (.*)/ do |button|
   step %{I press #{button}}
 end
 
-Then /I should (not )?see houses ratings: (.*)/ do |no, list|
+Then /^I should (not )?see houses ratings: (.*)/ do |no,list|
   @houses= House.where(avg_house_rating: list.split(%r{\s*, }))
   @houses.each do |house|
     step %{I should #{no}see "#{house['name']}"}

@@ -3,14 +3,14 @@ Feature: update operations
   As a User/landlord
   So that I can update the details of the house
   I want to be able to click Edit link
-
-Scenario: Existing houses
-  Given the following houses exist:
-  | name            | avg_house_rating | avg_lord_rating | lord_name | price | capacity | description        |
-  | 100 leroy       | 3                | 4               | nate      | 300   | 5        | description1       |
-  | 50 Mozart       | 5                | 5               | Harry     | 280   | 6        | description3       |
-  | 20 Beethoven    | 4                | 3               | Ron       | 340   | 10       | description4       |
-  | 99 Chestnut     | 3                | 4               | Sujoy Das | 300   | 6        | Lorem Ipsum        |
+  
+Background: Following houses exist
+    Given the following houses exist:
+    | name            | avg_house_rating | avg_lord_rating | lord_name | price | capacity | description        |
+    | 100 leroy       | 3                | 4               | nate      | 300   | 5        | description1       |
+    | 50 Mozart       | 5                | 5               | Harry     | 280   | 6        | description3       |
+    | 20 Beethoven    | 4                | 3               | Ron       | 340   | 10       | description4       |
+    | 99 Chestnut     | 3                | 4               | Sujoy Das | 300   | 6        | Lorem Ipsum        |
 
 Scenario: reach the update page
   When I am on the details page for "99 Chestnut"
